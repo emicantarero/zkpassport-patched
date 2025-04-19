@@ -1,0 +1,9 @@
+{
+    "private": true,
+    "workspaces": [
+      "sdk",
+      "utils",
+      "poseidon2"
+    ]
+  }
+  

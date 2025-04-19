@@ -1,11 +1,19 @@
 {
-    "private": true,
     "name": "zkpassport-patched",
+    "private": true,
     "version": "1.0.0",
+    "type": "module",
     "workspaces": [
       "sdk",
-      "utils",
-      "poseidon2"
-    ]
+      "poseidon2",
+      "utils"
+    ],
+    "scripts": {
+      "build": "npm run build -w poseidon2 && npm run build -w utils && npm run build -w sdk",
+      "clean": "rm -rf sdk/dist utils/dist poseidon2/dist",
+      "test": "npm run test -w sdk && npm run test -w utils && npm run test -w poseidon2"
+    },
+    "devDependencies": {},
+    "dependencies": {}
   }
   
